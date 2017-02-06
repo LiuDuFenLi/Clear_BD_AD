@@ -1,0 +1,28 @@
+{
+     "manifest_version": 2,
+     "name": "clear Du",
+     "version": "0.0.2",
+     "background": { "scripts": ["cleardu.js"] },
+     "permissions": [
+	"tabs",
+	"http://*/",
+	"https://*/"
+	],
+	//扩展图标在地址栏显示
+	//"page_action":{},
+	//扩展图标在工具栏显示
+     "browser_action": {
+          "default_icon": {
+               "19": "du19.png",
+               "38": "du38.png"
+          },
+          "default_title": "Clear baidu AD"
+     },
+     //这里的js会是注入到每个页面的
+      "content_scripts":[{
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_idle",
+      "js":["jquery-1_7.min.js","cleardu.js"]
+     }]
+
+}
