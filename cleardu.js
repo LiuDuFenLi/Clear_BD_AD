@@ -23,7 +23,7 @@ function changeBackgroundColor()
 
 				  if(text=="广告")
 				   {
-					  div.css("background-color","#ccc") ; 
+					  div.css("background-color","#000") ; 
 				   }
 
 			   })
